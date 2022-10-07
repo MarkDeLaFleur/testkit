@@ -10,7 +10,7 @@ import {onMount} from "svelte"
     let canvasEl;
 onMount(async () => {
     const stream = await navigator.mediaDevices.getUserMedia(
-        {video: {facingMode: {exact: "environment"} } }
+        {video: {facingMode: "user"}}  // {exact: "environment"} } }
     ).then((stream) => {
         videoEl.srcObject = stream;
         videoEl.play();
