@@ -1,7 +1,7 @@
 <script lang="ts">
-  import cv from "@techstark/opencv-js";
+  import cv from "@techstark/opencv-js"
   
-  let buildInfo: string = "";
+  let buildInfo = "";
   
 
   window.setTimeout(() => {

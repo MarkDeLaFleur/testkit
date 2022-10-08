@@ -12,6 +12,7 @@ onMount(async () => {
     const stream = await navigator.mediaDevices.getUserMedia(
         {video: {facingMode: "user"}}  // {exact: "environment"} } }
     ).then((stream) => {
+        console.log(stream.getTracks()[0].getCapabilities().toString)
         videoEl.srcObject = stream;
         videoEl.play();
     }).catch((err) => {
